@@ -19,6 +19,18 @@ class Aluno(PessoaFisica):
     def turno(self):
         return self.__turno
 
+    def acessarEscola(self, codigo_acesso):
+        if codigo_acesso == self.cgm:
+            print(f'Boa aula aluno(a), {super().nome}\n')
+            return True
+        else:
+            return False
+
+
+
+
+
+
     def __str__(self):
-        return f'Aluno:\n Nome: {super().nome}\n CPF:{super().cpf}\n RG:{super().rg}\n \
+        return f' Aluno:\n Nome: {super().nome}\n CPF:{super().cpf}\n RG:{super().rg}\n \
 Data de nascimento:{super().data_nascimento}\n CGM:{self.cgm}\n\n'
